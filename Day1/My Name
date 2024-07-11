@@ -1,0 +1,6 @@
+module Myname();
+   
+   inital begin
+    $diplay("\n\tMy name is Karthikeyan V "\n);
+   end
+endmodule
