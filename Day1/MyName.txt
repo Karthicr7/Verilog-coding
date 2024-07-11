@@ -2,7 +2,7 @@
 module MyName();
   
   initial begin
-    $display("\n\t My name is Karthikeyan and I started the course on 10 july 2024 \n"); 
+    $display("\n\t My name is Karthikeyan V \n"); 
   end
   
 endmodule
