@@ -1,9 +1,0 @@
-// Displaying My Name
-
-module MyName();
-  
-  initial begin
-    $display("\n\t My name is Karthikeyan \n"); 
-  end
-  
-endmodule
