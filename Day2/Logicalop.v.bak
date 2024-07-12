@@ -1,0 +1,31 @@
+
+module Logicalop();
+  
+   reg[3:0]x=4'b1010;
+   reg[3:0]y=4'b0101;
+  
+   reg z;
+
+   
+
+   initial begin
+   z=!x;
+$display("\t 1 x=%b  y=%b  z=%d",x,y,z);
+   #1
+   z=!y;
+$display("\t 2 x=%b  y=%b  z=%d",x,y,z);
+   #2
+   z=x&&y;
+$display("\t 3 x=%b  y=%b  z=%d",x,y,z);
+   #2
+   z=x||y;
+$display("\t 4 x=%b  y=%b  z=%d",x,y,z);
+   x=4'b0000;
+   z=!x;
+   $display("\t 5 x=%b  y=%b  z=%d",x,y,z);
+   #2
+   z=x&&y;
+$display("\t 6 x=%b  y=%b  z=%d",x,y,z);
+   end
+endmodule
+ 
