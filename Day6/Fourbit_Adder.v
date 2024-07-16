@@ -15,7 +15,7 @@ Fulladder FA1(
   .sum(s[0]),
   .carry(c[0])
 );
-
+ 
 Fulladder FA2(
   .a(a[1]),
   .b(b[1]),
