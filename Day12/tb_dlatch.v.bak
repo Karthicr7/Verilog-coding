@@ -1,0 +1,37 @@
+`timescale 1us/1ns
+module tb_Dlatch();
+
+   reg d;
+   reg en;
+   wire Q;
+   wire Qn;
+
+Dlatch D1(
+  .d(d),
+  .en(en),
+  .Q(Q),
+  .Qn(Qn)
+);
+
+
+initial begin
+
+   $monitor($time,"d=%d    en=%d  Q=%d  Qn=%d",d,en,Q,Qn);
+  
+   en= 0;
+   #2  ; d = 0;
+   #1; d = 1;
+   #1  ; d = 0;
+   #1  ; d = 1;
+   #1; en= 1;
+   #1; d = 1;
+   #1; d = 0;
+   #1; d = 1;
+   #1  ; en = 0; d = 0;
+   #1  ; d = 1;
+   #1  ; d = 0;
+   #30 $finish;
+end
+
+
+endmodule
