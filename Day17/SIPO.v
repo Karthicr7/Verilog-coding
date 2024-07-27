@@ -4,8 +4,7 @@ module shift_reg_sipo(
 	input clk,
     input sdi, // serial data in
 	output reg [3:0] q
-    );
-	
+);
 	// Async negative reset_n is used
 	// The input data is the same as the output data
 	always @(posedge clk or negedge reset_n) begin
